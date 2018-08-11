@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista zadań</title>
+</head>
+<body>
+<body style="background-color:powderblue;">
+
+<center><h1>Lista zadań do zrobienia:</h1></center>
+
+<ul th:each="task: ${tasks}">
+<li th:text="${task}">
+</li>
+</ul>
+
+<button onclick="goBack()">Powrót do strony głównej</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>
